@@ -4,8 +4,12 @@ import React from 'react'
 const Home = () => {
   const now = new Date();
 
-  const time = now.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit' });
-  const date = (new Intl.DateTimeFormat('en-US', { dateStyle: 'full' })).format(now);
+  // const time = now.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit' });
+
+  const time = now.toLocaleTimeString('en-IN', { hour: '2-digit', minute: '2-digit', hour12: true, timeZone: 'Asia/Kolkata' });
+  
+  const date = (new Intl.DateTimeFormat('en-IN', { dateStyle: 'full' })).format(now);
+
   return (
     <section className='flex size-full flex-col gap-10 text-white'>
       <div className="h-[303px] rounded-[20px] bg-[url('/images/hero-background.png')] bg-cover">
@@ -19,7 +23,7 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <MeetingTypeList/>
+      <MeetingTypeList />
     </section>
   )
 }
