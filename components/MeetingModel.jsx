@@ -8,6 +8,7 @@ import {
 } from "@/components/ui/dialog"
 import { cn } from '@/lib/utils';
 import { Button } from './ui/button';
+import Image from 'next/image';
 
 
 const MeetingModel = ({ isOpen, onClose, title, className, children, buttonText, handleClick, image, buttonIcon }) => {
